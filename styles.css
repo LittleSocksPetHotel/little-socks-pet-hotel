@@ -125,6 +125,17 @@ a {
   color: var(--soft-brown);
 }
 
+.nav a.nav-cta {
+  background: var(--terracotta);
+  color: var(--white);
+  border: 2px solid var(--terracotta);
+}
+
+.nav a.nav-cta:hover {
+  background: var(--soft-brown);
+  color: var(--white);
+  border-color: var(--soft-brown);
+}
 /* Hero sections */
 .hero {
   display: grid;
