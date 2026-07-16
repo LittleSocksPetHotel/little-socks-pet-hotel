@@ -18,7 +18,11 @@ document.querySelectorAll(".booking-link").forEach((link) => {
 // Slideshow functionality
 const slides = document.querySelectorAll(".slide");
 let currentSlide = 0;
-const slideDuration = 5000; // 5 seconds (moderate interval)
+/* slideDuration controls how long each photo displays before switching to the next
+   5000 milliseconds = 5 seconds (old speed)
+   4000 milliseconds = 4 seconds (new speed)
+   Change this number to make photos display longer or shorter */
+const slideDuration = 4000;
 
 function showSlide(index) {
   // Hide all slides
@@ -40,5 +44,5 @@ function nextSlide() {
 // Start the slideshow if there are slides
 if (slides.length > 0) {
   showSlide(0); // Show first slide immediately
-  setInterval(nextSlide, slideDuration); // Change slide every 5 seconds
+  setInterval(nextSlide, slideDuration); // Change slide every 4 seconds
 }
