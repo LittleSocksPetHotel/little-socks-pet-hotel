@@ -157,6 +157,35 @@ a {
   transform: rotate(1.5deg);
 }
 
+.hero-profile-card {
+  /* Learning note: this keeps the image visible at native proportions (no cropping). */
+  min-height: 0;
+  width: min(50vw, 420px);
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  transform: none;
+  box-shadow: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+
+.hero-profile-image {
+  width: 100%;
+  height: auto;
+  max-height: 70vh;
+  object-fit: contain;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  background: var(--white);
+}
+
+.hero-profile-button {
+  min-width: 220px;
+}
+
 .page-hero {
   padding: 72px 6vw 48px;
   background:
@@ -317,6 +346,39 @@ a {
 
 .gallery-grid.large {
   grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.profile-story {
+  display: grid;
+  gap: 24px;
+}
+
+.profile-story-block {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.75fr) minmax(0, 1.25fr);
+  gap: 24px;
+  align-items: center;
+}
+
+.profile-story-block.reverse {
+  grid-template-columns: minmax(0, 1.25fr) minmax(280px, 0.75fr);
+}
+
+.profile-story-block.reverse .profile-story-image {
+  order: 2;
+}
+
+.profile-story-block.reverse .content-box {
+  order: 1;
+}
+
+.profile-story-image {
+  width: 100%;
+  max-height: 520px;
+  object-fit: contain;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  background: var(--white);
 }
 
 .photo-placeholder {
@@ -490,11 +552,25 @@ a {
     transform: none;
   }
 
+  .hero-profile-card {
+    width: min(100%, 420px);
+  }
+
   .cards.three,
   .rate-grid,
   .gallery-grid.preview,
   .gallery-grid.large {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .profile-story-block,
+  .profile-story-block.reverse {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-story-block.reverse .profile-story-image,
+  .profile-story-block.reverse .content-box {
+    order: initial;
   }
 }
 
@@ -515,7 +591,9 @@ a {
   .cards.three,
   .rate-grid,
   .gallery-grid.preview,
-  .gallery-grid.large {
+  .gallery-grid.large,
+  .profile-story-block,
+  .profile-story-block.reverse {
     grid-template-columns: 1fr;
   }
 
