@@ -351,15 +351,15 @@ a {
 }
 
 .slideshow {
-  /* padding-bottom creates the aspect ratio of the image container
-     66.67% = 3:2 ratio (original - too tall)
-     50% = 2:1 ratio (previous version - still too tall)
-     35% = compact height (tried)
-     25% = even more compact (current - minimal height)
-     Adjust this percentage if you want the image even smaller or larger */
+  /* padding-bottom creates the HEIGHT of the image
+     25% = too short (was cutting off 60% of photos)
+     50% = about twice the height (new - shows full photos)
+     Higher % = taller images
+     Lower % = shorter images
+     Adjust this percentage if you want more or less height */
   position: relative;
   width: 100%;
-  padding-bottom: 25%;
+  padding-bottom: 50%;
   overflow: hidden;
   border-radius: var(--radius);
   box-shadow: var(--shadow);
