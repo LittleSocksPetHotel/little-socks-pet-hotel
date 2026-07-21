@@ -80,17 +80,17 @@ a {
   align-items: center;
   justify-content: space-between;
   gap: 24px;
-  padding: 18px 6vw;
+  padding: 54px 6vw;
 }
 
 .logo {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
+  gap: 14px;
   color: var(--charcoal);
   text-decoration: none;
   font-weight: 800;
-  font-size: 1.05rem;
+  font-size: 1.6rem;
 }
 
 .logo-mark {
@@ -99,8 +99,8 @@ a {
   border-radius: 999px;
   display: inline-grid;
   place-items: center;
-  width: 42px;
-  height: 42px;
+  width: 60px;
+  height: 60px;
 }
 
 .nav {
@@ -115,7 +115,8 @@ a {
   text-decoration: none;
   color: var(--charcoal);
   font-weight: 700;
-  padding: 10px 12px;
+  font-size: 1.6rem;
+  padding: 14px 16px;
   border-radius: 999px;
 }
 
@@ -497,15 +498,15 @@ a {
 }
 
 .rover-stars .star-icon {
-  width: 14px;
-  height: 14px;
+  width: 28px;
+  height: 28px;
   object-fit: contain;
   display: block;
 }
 
 /* The small text beneath the stars */
 .rover-label {
-  font-size: 0.68rem;
+  font-size: 1.6rem;
   font-weight: 800;
   color: var(--soft-brown);
   text-transform: uppercase;
@@ -750,8 +751,8 @@ a {
   }
 
   .nav a {
-    padding: 8px 10px;
-    font-size: 0.95rem;
+    padding: 12px 14px;
+    font-size: 1.6rem;
   }
 
   .cards.three,
