@@ -26,7 +26,13 @@
       <a href="services.html">Services & Rates</a>
       <a href="gallery.html">View Profiles</a>
 <a class="nav-cta booking-link" href="https://docs.google.com/forms/d/e/1FAIpQLSftZxTAw-UsZBtrj0l02xMFpnldY8SociJpV_ycvSw5lvjqvQ/viewform" target="_blank" rel="noopener">Request Booking Now</a>    </nav>
-  </header>
+    <!-- Rover badge: links to your real Rover.com profile and displays your star rating.
+         To update the review count, edit the text inside the .rover-label span.
+         The gold stars are the Unicode character ? — add or remove to change star count. -->
+    <a class="rover-badge" href="https://www.rover.com/sit/littlesockspethotel" target="_blank" rel="noopener" aria-label="View our 160 5-star reviews on Rover.com">
+      <span class="rover-stars">?????</span>
+      <span class="rover-label">Over 150 5-Star Reviews on Rover.com!</span>
+    </a>  </header>
 
   <main>
     <!-- Hero section: the first thing visitors see -->
@@ -76,6 +82,33 @@
           <h3>Flexible care options</h3>
           <p>Choose from overnight boarding, full-day daycare, half-day daycare, walks, and drop-ins.</p>
         </article>
+      </div>
+    </section>
+
+    <!-- Reviews carousel: shows Rover reviews one at a time via JavaScript.
+         To add or edit reviews, update the reviewsData array in script.js -->
+    <section class="section soft">
+      <div class="section-heading">
+        <p class="eyebrow">What pet parents say</p>
+        <h2>160 five-star reviews on Rover.com.</h2>
+      </div>
+      <div class="reviews-carousel">
+        <div class="review-card" id="review-card">
+          <div class="review-stars">?????</div>
+          <blockquote class="review-text" id="review-text"></blockquote>
+          <div class="review-meta">
+            <span class="review-name" id="review-name"></span>
+            <span class="review-service" id="review-service"></span>
+          </div>
+        </div>
+        <div class="reviews-nav">
+          <button class="reviews-btn" id="review-prev" aria-label="Previous review">&#8592; Previous</button>
+          <span class="review-counter" id="review-counter"></span>
+          <button class="reviews-btn" id="review-next" aria-label="Next review">Next &#8594;</button>
+        </div>
+        <div class="center" style="margin-top:24px;">
+          <a class="button secondary" href="https://www.rover.com/sit/littlesockspethotel" target="_blank" rel="noopener">Read All Reviews on Rover.com</a>
+        </div>
       </div>
     </section>
 
